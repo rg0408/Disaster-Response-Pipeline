@@ -1,1 +1,31 @@
-# Disaster-Response-Pipeline
+Disaster Response Pipeline
+In this project, I analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages.
+
+In the data folder, you'll find a data set provided by Figure Eight containing real messages that were sent during disaster events. I created a machine learning pipeline to categorize these events so that one can send the messages to an appropriate disaster relief agency.
+
+The project includes a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
+
+Project components
+ETL Pipeline
+The Python script, process_data.py, contains a data cleaning pipeline that:
+
+Loads the messages and categories datasets
+Merges the two datasets
+Cleans the data
+Stores it in a SQLite database
+ML Pipeline
+The Python script, train_classifier.py, has a machine learning pipeline that:
+
+Loads data from the SQLite database
+Splits the dataset into training and test sets
+Builds a text processing and machine learning pipeline
+Trains and tunes a model using GridSearchCV
+Outputs results on the test set
+Exports the final model as a pickle file
+Flask Web App
+It displays results in a Flask web app which is deployed on Heroku.
+Installation
+run: pip install -r requirements.txt
+
+Licence
+Feel free to use the code and let me know if the model can be improved. If you would like to do further analysis, it is available below under a Creative Commons CC0 1.0 Universal (CC0 1.0) license.
